@@ -28,4 +28,11 @@ a {
 	height:38px;
 	font-size:20px;
 	font-family:Microsoft JhengHei;
+	
 }
+
+p{
+	line-height: 20px;
+	display: inline-block;
+}
+

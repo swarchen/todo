@@ -23,19 +23,43 @@ router.post('/add', function(req, res, next) {
 	var newitem = new Item({ item: todo });
 	newitem.save(function (err, newitem) {
 		if (err) return console.error(err);
+		res.redirect('/');
 	});
 });
 
-router.post('id/done', function(req, res, next) {
-  //do something
+router.post('/:id/done', function(req, res, next) {
+	var id = req.params.id;
+
+	Item.findOneAndUpdate({
+		_id: id
+	}, {
+		done: true
+	}, function(err, item) {
+		if (err) console.log(err);
+		res.json(true);
+	});
 });
 
-router.post('id/del', function(req, res, next) {
-  //do something
+router.post('/:id/del', function(req, res, next) {
+	var id = req.params.id;
+
+	Item.findByIdAndRemove(id, function(err) {
+		if (err) console.log(err);
+		res.json(true);
+	});
 });
 
-router.post('id/rec', function(req, res, next) {
-  //do something
+router.post('/:id/rec', function(req, res, next) {
+	var id = req.params.id;
+
+	Item.findOneAndUpdate({
+		_id: id
+	}, {
+		done: false
+	}, function(err, item) {
+		if (err) console.log(err);
+		res.json(true);
+	});
 });
 
 
