@@ -1,5 +1,3 @@
-//var mongoose = require('mongoose');
-//mongoose.connect('mongodb://localhost/todo-list');
 function itemSchema(mongoose){
 	var Schema = mongoose.Schema;
 
@@ -10,9 +8,5 @@ function itemSchema(mongoose){
 	});
 
 }
-
-
-//var Item = mongoose.model('Item', itemSchema);
-
 
 exports.itemSchema = itemSchema;

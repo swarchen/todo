@@ -3,6 +3,7 @@
   <head>
     <title>To Do List</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="bootstrap.min.css">
   </head>
   <body>
   <div class="all">
@@ -15,7 +16,20 @@
     </div>
     <div>
       <h1>待完成</h1>
-
+      <div class="list-group" id="progress_box">
+        <% items.forEach(function(item) { %>  
+          <% if (!item.done) { %>
+            <div class="list-group-item">
+              <%= item.item %>
+              <div class="operations pull-right">
+                <button class="btn btn-primary btn-xs checked-btn" data-id=<%= item._id %>>完成</button>
+                <button class="btn btn-danger btn-xs delete-btn" data-id=<%= item._id %>>刪除</button>
+              </div>
+              
+            </div>
+          <% } %>
+        <% }); %>
+      </div>
     </div>
     <div>
       <h1>完成囉</h1>
