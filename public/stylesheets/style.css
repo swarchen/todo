@@ -1,0 +1,31 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.all {
+	 color:rgb(57,177,213); 
+	 position:absolute; 
+	 top:25%;
+	 left:25%;
+	 font-family:Microsoft JhengHei;
+}
+
+#bar {
+	width: 550px;
+	height:30px;
+	font-size:20px;
+
+}
+
+.btn {
+    color: white;
+    background-color: rgb(57,177,213); 
+    width: 100px;
+	height:38px;
+	font-size:20px;
+	font-family:Microsoft JhengHei;
+}
