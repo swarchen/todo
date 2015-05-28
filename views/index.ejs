@@ -21,8 +21,8 @@
           <% if (!item.done) { %>
             <div class="line">
               <p><%= item.item %></p>
-              <button class="done btn" data-id=<%= item._id %>>完成</button>
-              <button class="del btn" data-id=<%= item._id %>>刪除</button>
+              <button id="done" class="btn btn-success" data-id=<%= item._id %>>完成</button>
+              <button id="del" class="btn btn-danger" data-id=<%= item._id %>>刪除</button>
             </div>
           <% } %>
         <% }); %>
@@ -35,7 +35,7 @@
           <% if (item.done) { %>
             <div class="line">
               <p><%= item.item %></p>
-              <button class="rec btn" data-id=<%= item._id %>>復原</button>
+              <button id="rec" class="btn" data-id=<%= item._id %>>復原</button>
             </div>
           <% } %>
         <% }); %>

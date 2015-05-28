@@ -3,7 +3,7 @@ $(document).ready(function(){
 	
 
 	$('button').click(function(){
-		var url = './' + $(this).data('id') + '/' + $(this).attr('class');
+		var url = './' + $(this).data('id') + '/' + $(this).attr('id');
 		console.log(url);
 
 		$.ajax({

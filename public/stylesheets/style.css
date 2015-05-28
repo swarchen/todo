@@ -24,15 +24,21 @@ a {
 .btn {
     color: white;
     background-color: rgb(57,177,213); 
-    width: 100px;
-	height:38px;
+    width: 60px;
+	height:30px;
 	font-size:20px;
 	font-family:Microsoft JhengHei;
 	
 }
 
 p{
-	line-height: 20px;
+	font-size: 20px;
+	line-height: 38px;
 	display: inline-block;
+}
+
+button{
+	float: right;
+	margin-left: 3px !important; 
 }
 
